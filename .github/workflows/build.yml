@@ -1,7 +1,11 @@
 ---
 name: "Build & Deploy Docker Image"
+
 on:
   push:
+
+permissions:
+  contents: read
 
 jobs:
   build-deploy:

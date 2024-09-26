@@ -1,0 +1,5 @@
+---
+quiet: true
+skip-check:
+  - CKV_DOCKER_2 # HEALTHCHECK is not needed for linting
+  - CKV_DOCKER_3 # Run on root user for now

@@ -1,0 +1,5 @@
+# Run on root user for now
+AVD-DS-0002
+
+# HEALTHCHECK is not needed for linting
+AVD-DS-0026
