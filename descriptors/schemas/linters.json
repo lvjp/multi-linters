@@ -1,0 +1,99 @@
+{
+  "$id": "https://github.com/lvjp/multi-linters/blob/main/descriptors/schemas/linters.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Multi-linter linter descriptor",
+  "description": "Linter definition for multi-linter",
+  "type": "object",
+  "properties": {
+    "id": {
+      "title": "Descriptor unique identifier",
+      "description": "Lowercase unique identifier for the linter",
+      "type": "string",
+      "examples": ["hadolint"]
+    },
+    "project": {
+      "title": "Linter project related informations",
+      "type": "object",
+      "properties": {
+        "name": {
+          "title": "Linter name",
+          "description": "Name of the linter (same as cli command if possible)",
+          "type": "string",
+          "examples": ["hadolint"]
+        },
+        "license": {
+          "title": "Linter license",
+          "description": "spdx license id of the linter",
+          "type": "string",
+          "enum": ["GPL-3.0-only"]
+        },
+        "logo": {
+          "title": "Linter logo URL",
+          "description": "URL of the logo of the linter",
+          "type": "string",
+          "format": "uri",
+          "examples": [
+            "https://hadolint.github.io/hadolint/img/cat_container.png"
+          ]
+        },
+        "repository": {
+          "description": "URL of the linter repository home page",
+          "title": "Linter repository URL",
+          "type": "string",
+          "format": "uri",
+          "examples": ["https://github.com/hadolint/hadolint"]
+        },
+        "website": {
+          "title": "Linter URL",
+          "description": "URL of the linter home page",
+          "type": "string",
+          "format": "uri",
+          "examples": ["https://hadolint.github.io/hadolint"]
+        }
+      },
+      "required": ["name", "license", "repository"]
+    },
+    "capabilities": {
+      "title": "Linter capabilities",
+      "type": "object",
+      "properties": {
+        "mode": {
+          "title": "Linting mode",
+          "description": "Defines how the linter should be called",
+          "type": "string",
+          "enum": ["file_per_file", "random_group_of_files", "project"]
+        },
+        "sarif": {
+          "title": "Can output SARIF",
+          "description": "Shows if we can use the generated SARIF report",
+          "type": "object",
+          "properties": {
+            "args": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "required": ["mode"]
+    },
+    "dockerfile": {
+      "title": "Elements for Dockerfile generation",
+      "type": "object",
+      "properties": {
+        "build": {
+          "title": "Build stage",
+          "type": "string"
+        },
+        "install": {
+          "title": "Final install stage",
+          "type": "string"
+        }
+      },
+      "required": ["install"]
+    }
+  },
+  "required": ["id", "project", "capabilities", "dockerfile"]
+}

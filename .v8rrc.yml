@@ -1,0 +1,5 @@
+customCatalog:
+  schemas:
+    - name: Linters descriptors
+      fileMatch: ["descriptors/linters/*.yaml"]
+      location: descriptors/schemas/linters.json

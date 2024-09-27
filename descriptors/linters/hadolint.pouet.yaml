@@ -1,0 +1,20 @@
+---
+id: hadolint
+project:
+  name: hadolint
+  license: GPL-3.0-only
+  logo: https://hadolint.github.io/hadolint/img/cat_container.png
+  repository: https://github.com/hadolint/hadolint
+  website: https://hadolint.github.io/hadolint
+capabilities:
+  sarif:
+    args:
+      - --format=sarif
+  mode: random_group_of_files
+dockerfile:
+  build: |-
+    # renovate: datasource=docker depName=hadolint/hadolint
+    ARG DOCKERFILE_HADOLINT_VERSION=v2.12.0-alpine
+    FROM hadolint/hadolint:${DOCKERFILE_HADOLINT_VERSION} AS hadolint
+  install: |-
+    COPY --link --from=hadolint /bin/hadolint /usr/bin/hadolint
