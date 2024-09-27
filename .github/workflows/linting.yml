@@ -47,6 +47,8 @@ jobs:
           VALIDATE_ALL_CODEBASE: true
           # SPELL is a little bit tricky
           DISABLE: SPELL
+          # markdown-table-formatter mess with prettier
+          DISABLE_LINTERS: MARKDOWN_MARKDOWN_TABLE_FORMATTER
           REPOSITORY_CHECKOV_CONFIG_FILE: .checkov.yaml
 
       - name: Archive Megalinter artifacts
