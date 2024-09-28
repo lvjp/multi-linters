@@ -2,132 +2,132 @@
 
 ## Comparison
 
-| Linter                                                       |  multi-linter (2)  | mega-linter (110)  | super-linter (75)  |
-| ------------------------------------------------------------ | :----------------: | :----------------: | :----------------: |
-| [actionlint][actionlint]                                     |                    | :white_check_mark: | :white_check_mark: |
-| [ansible-lint][ansible-lint]                                 |                    | :white_check_mark: | :white_check_mark: |
-| [Azure Resource Manager Template Toolkit (arm-ttk)][arm-ttk] |                    | :white_check_mark: | :white_check_mark: |
-| [ASL Validator][asl-validator]                               |                    |                    | :white_check_mark: |
-| [bandit][bandit]                                             |                    | :white_check_mark: |                    |
-| bash-exec                                                    |                    | :white_check_mark: | :white_check_mark: |
-| [bicep-linter][bicep-linter]                                 |                    | :white_check_mark: |                    |
-| [black][black]                                               |                    | :white_check_mark: | :white_check_mark: |
-| [AWS CloudFormation Linter (cfn-lint)][cfn-lint]             |                    | :white_check_mark: | :white_check_mark: |
-| [checkmake][checkmake]                                       |                    | :white_check_mark: |                    |
-| [checkov][checkov]                                           |                    | :white_check_mark: | :white_check_mark: |
-| [checkstyle][checkstyle]                                     |                    | :white_check_mark: | :white_check_mark: |
-| [chktex][chktex]                                             |                    |                    | :white_check_mark: |
-| [clang-format][clang-format]                                 |                    | :white_check_mark: | :white_check_mark: |
-| [clippy][clippy]                                             |                    | :white_check_mark: | :white_check_mark: |
-| [clj-kondo][clj-kondo]                                       |                    | :white_check_mark: | :white_check_mark: |
-| [cljstyle][cljstyle]                                         |                    | :white_check_mark: |                    |
-| [coffeelint][coffeelint]                                     |                    | :white_check_mark: | :white_check_mark: |
-| [commitlint][commitlint]                                     |                    |                    | :white_check_mark: |
-| [cpplint][cpplint]                                           |                    | :white_check_mark: | :white_check_mark: |
-| [csharpier][csharpier]                                       |                    | :white_check_mark: |                    |
-| [cspell][cspell]                                             |                    | :white_check_mark: |                    |
-| [dart-analyze][dart-analyze]                                 |                    | :white_check_mark: | :white_check_mark: |
-| [detekt][detekt]                                             |                    | :white_check_mark: |                    |
-| [devskim][devskim]                                           |                    | :white_check_mark: |                    |
-| [djlint][djlint]                                             |                    | :white_check_mark: |                    |
-| [dotenv-linter][dotenv-linter]                               |                    | :white_check_mark: | :white_check_mark: |
-| [dotnet-format][dotnet-format]                               |                    | :white_check_mark: | :white_check_mark: |
-| [dustilock][dustilock]                                       |                    | :white_check_mark: |                    |
-| [editorconfig-checker][editorconfig-checker]                 |                    | :white_check_mark: | :white_check_mark: |
-| [eslint-plugin-json][eslint-plugin-json]                     |                    |                    | :white_check_mark: |
-| [eslint-plugin-jsonc][eslint-plugin-jsonc]                   |                    | :white_check_mark: | :white_check_mark: |
-| [eslint-plugin-jsx-a11y][eslint-plugin-jsx-a11y]             |                    | :white_check_mark: | :white_check_mark: |
-| [eslint-plugin-react][eslint-plugin-react]                   |                    | :white_check_mark: | :white_check_mark: |
-| [eslint-typescript][eslint-typescript]                       |                    | :white_check_mark: | :white_check_mark: |
-| [ESLint][eslint]                                             |                    | :white_check_mark: | :white_check_mark: |
-| [flake8][flake8]                                             |                    | :white_check_mark: | :white_check_mark: |
-| [gherkin-lint][gherkin-lint]                                 |                    | :white_check_mark: | :white_check_mark: |
-| [Git conflict markers presence in files][git-diff]           |                    | :white_check_mark: | :white_check_mark: |
-| [GitLeaks][gitleaks]                                         |                    | :white_check_mark: | :white_check_mark: |
-| [golangci-lint][golangci-lint]                               | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| [google-java-format][google-java-format]                     |                    |                    | :white_check_mark: |
-| [GoReleaser][goreleaser]                                     |                    |                    | :white_check_mark: |
-| [graphql-schema-linter][graphql-schema-linter]               |                    | :white_check_mark: |                    |
-| [grype][grype]                                               |                    | :white_check_mark: |                    |
-| [Haskell Dockerfile Linter][hadolint]                        | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| [helm][helm]                                                 |                    | :white_check_mark: |                    |
-| [HTMLHint][htmlhint]                                         |                    | :white_check_mark: | :white_check_mark: |
-| [isort][isort]                                               |                    | :white_check_mark: | :white_check_mark: |
-| [jscpd][jscpd]                                               |                    | :white_check_mark: | :white_check_mark: |
-| [jsonlint][jsonlint]                                         |                    | :white_check_mark: |                    |
-| [kics][kics]                                                 |                    | :white_check_mark: |                    |
-| [ktlint][ktlint]                                             |                    | :white_check_mark: | :white_check_mark: |
-| [kubeconform][kubeconform]                                   |                    | :white_check_mark: | :white_check_mark: |
-| [kubescape][kubescape]                                       |                    | :white_check_mark: |                    |
-| [LibXML][libxml]                                             |                    |                    | :white_check_mark: |
-| [lightning-flow-scanner][lightning-flow-scanner]             |                    | :white_check_mark: |                    |
-| [lintr][lintr]                                               |                    | :white_check_mark: | :white_check_mark: |
-| [ls-lint][ls-lint]                                           |                    | :white_check_mark: |                    |
-| [luacheck][luacheck]                                         |                    | :white_check_mark: | :white_check_mark: |
-| [lychee][lychee]                                             |                    | :white_check_mark: |                    |
-| [markdown-link-check][markdown-link-check]                   |                    | :white_check_mark: |                    |
-| [markdown-table-formatter][markdown-table-formatter]         |                    | :white_check_mark: |                    |
-| [markdownlint][markdownlint]                                 |                    | :white_check_mark: | :white_check_mark: |
-| [mypy][mypy]                                                 |                    | :white_check_mark: |                    |
-| [npm-groovy-lint][npm-groovy-lint]                           |                    | :white_check_mark: | :white_check_mark: |
-| [npm-package-json-lint][npm-package-json-lint]               |                    | :white_check_mark: |                    |
-| [perlcritic][perlcritic]                                     |                    | :white_check_mark: | :white_check_mark: |
-| [php-cs-fixer][php-cs-fixer]                                 |                    | :white_check_mark: |                    |
-| [PHP CodeSniffer][phpcs]                                     |                    | :white_check_mark: | :white_check_mark: |
-| [phplint][phplint]                                           |                    | :white_check_mark: |                    |
-| [PHPStan][phpstan]                                           |                    | :white_check_mark: | :white_check_mark: |
-| [PHP built-in linter][phpstd]                                |                    |                    | :white_check_mark: |
-| [pmd][pmd]                                                   |                    | :white_check_mark: |                    |
-| [powershell-formatter][powershell-formatter]                 |                    | :white_check_mark: |                    |
-| [powershell][powershell]                                     |                    | :white_check_mark: |                    |
-| [Prettier][prettier]                                         |                    | :white_check_mark: | :white_check_mark: |
-| [proselint][proselint]                                       |                    | :white_check_mark: |                    |
-| [protolint][protolint]                                       |                    | :white_check_mark: | :white_check_mark: |
-| [PSScriptAnalyzer][ps-script-analyzer]                       |                    |                    | :white_check_mark: |
-| [Psalm][psalm]                                               |                    | :white_check_mark: | :white_check_mark: |
-| [puppet-lint][puppet-lint]                                   |                    | :white_check_mark: |                    |
-| [pyink][pyink]                                               |                    |                    | :white_check_mark: |
-| [pylint][pylint]                                             |                    | :white_check_mark: | :white_check_mark: |
-| [pyright][pyright]                                           |                    | :white_check_mark: |                    |
-| [Raku][raku]                                                 |                    | :white_check_mark: | :white_check_mark: |
-| [remark-lint][remark-lint]                                   |                    | :white_check_mark: |                    |
-| [renovate-config-validator][renovate-config-validator]       |                    |                    | :white_check_mark: |
-| [revive][revive]                                             |                    | :white_check_mark: |                    |
-| [roslynator][roslynator]                                     |                    | :white_check_mark: |                    |
-| [rst-lint][rst-lint]                                         |                    | :white_check_mark: |                    |
-| [rstcheck][rstcheck]                                         |                    | :white_check_mark: |                    |
-| [RuboCop][rubocop]                                           |                    | :white_check_mark: | :white_check_mark: |
-| [ruff][ruff]                                                 |                    | :white_check_mark: | :white_check_mark: |
-| [Rustfmt][rustfmt]                                           |                    |                    | :white_check_mark: |
-| [scalafix][scalafix]                                         |                    | :white_check_mark: |                    |
-| [scalafmt][scalafmt]                                         |                    |                    | :white_check_mark: |
-| [secretlint][secretlint]                                     |                    | :white_check_mark: |                    |
-| [semgrep][semgrep]                                           |                    | :white_check_mark: |                    |
-| [sfdx-scanner-apex][sfdx-scanner-apex]                       |                    | :white_check_mark: |                    |
-| [sfdx-scanner-aura][sfdx-scanner-aura]                       |                    | :white_check_mark: |                    |
-| [sfdx-scanner-lwc][sfdx-scanner-lwc]                         |                    | :white_check_mark: |                    |
-| [ShellCheck][shellcheck]                                     |                    | :white_check_mark: | :white_check_mark: |
-| [shfmt][shfmt]                                               |                    | :white_check_mark: | :white_check_mark: |
-| [snakefmt][snakefmt]                                         |                    | :white_check_mark: | :white_check_mark: |
-| [snakemake][snakemake]                                       |                    | :white_check_mark: | :white_check_mark: |
-| [spectral][spectral]                                         |                    | :white_check_mark: | :white_check_mark: |
-| [sqlfluff][sqlfluff]                                         |                    | :white_check_mark: | :white_check_mark: |
-| [standardjs][standardjs]                                     |                    | :white_check_mark: | :white_check_mark: |
-| [stylelint][stylelint]                                       |                    | :white_check_mark: | :white_check_mark: |
-| [swiftlint][swiftlint]                                       |                    | :white_check_mark: |                    |
-| [syft][syft]                                                 |                    | :white_check_mark: |                    |
-| [tekton-lint][tekton-lint]                                   |                    | :white_check_mark: | :white_check_mark: |
-| [terraform-fmt][terraform-fmt]                               |                    | :white_check_mark: | :white_check_mark: |
-| [terragrunt][terragrunt]                                     |                    | :white_check_mark: | :white_check_mark: |
-| [terrascan][terrascan]                                       |                    | :white_check_mark: | :white_check_mark: |
-| [textlint][textlint]                                         |                    |                    | :white_check_mark: |
-| [tflint][tflint]                                             |                    | :white_check_mark: | :white_check_mark: |
-| [trivy][trivy]                                               |                    | :white_check_mark: |                    |
-| [trufflehog][trufflehog]                                     |                    | :white_check_mark: |                    |
-| [tsqllint][tsqllint]                                         |                    | :white_check_mark: |                    |
-| [v8r][v8r]                                                   |                    | :white_check_mark: |                    |
-| [vale][vale]                                                 |                    | :white_check_mark: |                    |
-| [YamlLint][yamllint]                                         |                    | :white_check_mark: | :white_check_mark: |
+| Linter                                                       | multi-linter (2) | mega-linter (110) | super-linter (75) |
+| ------------------------------------------------------------ | :--------------: | :---------------: | :---------------: |
+| [actionlint][actionlint]                                     |                  |        ✅         |        ✅         |
+| [ansible-lint][ansible-lint]                                 |                  |        ✅         |        ✅         |
+| [Azure Resource Manager Template Toolkit (arm-ttk)][arm-ttk] |                  |        ✅         |        ✅         |
+| [ASL Validator][asl-validator]                               |                  |                   |        ✅         |
+| [bandit][bandit]                                             |                  |        ✅         |                   |
+| bash-exec                                                    |                  |        ✅         |        ✅         |
+| [bicep-linter][bicep-linter]                                 |                  |        ✅         |                   |
+| [black][black]                                               |                  |        ✅         |        ✅         |
+| [AWS CloudFormation Linter (cfn-lint)][cfn-lint]             |                  |        ✅         |        ✅         |
+| [checkmake][checkmake]                                       |                  |        ✅         |                   |
+| [checkov][checkov]                                           |                  |        ✅         |        ✅         |
+| [checkstyle][checkstyle]                                     |                  |        ✅         |        ✅         |
+| [chktex][chktex]                                             |                  |                   |        ✅         |
+| [clang-format][clang-format]                                 |                  |        ✅         |        ✅         |
+| [clippy][clippy]                                             |                  |        ✅         |        ✅         |
+| [clj-kondo][clj-kondo]                                       |                  |        ✅         |        ✅         |
+| [cljstyle][cljstyle]                                         |                  |        ✅         |                   |
+| [coffeelint][coffeelint]                                     |                  |        ✅         |        ✅         |
+| [commitlint][commitlint]                                     |                  |                   |        ✅         |
+| [cpplint][cpplint]                                           |                  |        ✅         |        ✅         |
+| [csharpier][csharpier]                                       |                  |        ✅         |                   |
+| [cspell][cspell]                                             |                  |        ✅         |                   |
+| [dart-analyze][dart-analyze]                                 |                  |        ✅         |        ✅         |
+| [detekt][detekt]                                             |                  |        ✅         |                   |
+| [devskim][devskim]                                           |                  |        ✅         |                   |
+| [djlint][djlint]                                             |                  |        ✅         |                   |
+| [dotenv-linter][dotenv-linter]                               |                  |        ✅         |        ✅         |
+| [dotnet-format][dotnet-format]                               |                  |        ✅         |        ✅         |
+| [dustilock][dustilock]                                       |                  |        ✅         |                   |
+| [editorconfig-checker][editorconfig-checker]                 |                  |        ✅         |        ✅         |
+| [eslint-plugin-json][eslint-plugin-json]                     |                  |                   |        ✅         |
+| [eslint-plugin-jsonc][eslint-plugin-jsonc]                   |                  |        ✅         |        ✅         |
+| [eslint-plugin-jsx-a11y][eslint-plugin-jsx-a11y]             |                  |        ✅         |        ✅         |
+| [eslint-plugin-react][eslint-plugin-react]                   |                  |        ✅         |        ✅         |
+| [eslint-typescript][eslint-typescript]                       |                  |        ✅         |        ✅         |
+| [ESLint][eslint]                                             |                  |        ✅         |        ✅         |
+| [flake8][flake8]                                             |                  |        ✅         |        ✅         |
+| [gherkin-lint][gherkin-lint]                                 |                  |        ✅         |        ✅         |
+| [Git conflict markers presence in files][git-diff]           |                  |        ✅         |        ✅         |
+| [GitLeaks][gitleaks]                                         |                  |        ✅         |        ✅         |
+| [golangci-lint][golangci-lint]                               |        ✅        |        ✅         |        ✅         |
+| [google-java-format][google-java-format]                     |                  |                   |        ✅         |
+| [GoReleaser][goreleaser]                                     |                  |                   |        ✅         |
+| [graphql-schema-linter][graphql-schema-linter]               |                  |        ✅         |                   |
+| [grype][grype]                                               |                  |        ✅         |                   |
+| [Haskell Dockerfile Linter][hadolint]                        |        ✅        |        ✅         |        ✅         |
+| [helm][helm]                                                 |                  |        ✅         |                   |
+| [HTMLHint][htmlhint]                                         |                  |        ✅         |        ✅         |
+| [isort][isort]                                               |                  |        ✅         |        ✅         |
+| [jscpd][jscpd]                                               |                  |        ✅         |        ✅         |
+| [jsonlint][jsonlint]                                         |                  |        ✅         |                   |
+| [kics][kics]                                                 |                  |        ✅         |                   |
+| [ktlint][ktlint]                                             |                  |        ✅         |        ✅         |
+| [kubeconform][kubeconform]                                   |                  |        ✅         |        ✅         |
+| [kubescape][kubescape]                                       |                  |        ✅         |                   |
+| [LibXML][libxml]                                             |                  |                   |        ✅         |
+| [lightning-flow-scanner][lightning-flow-scanner]             |                  |        ✅         |                   |
+| [lintr][lintr]                                               |                  |        ✅         |        ✅         |
+| [ls-lint][ls-lint]                                           |                  |        ✅         |                   |
+| [luacheck][luacheck]                                         |                  |        ✅         |        ✅         |
+| [lychee][lychee]                                             |                  |        ✅         |                   |
+| [markdown-link-check][markdown-link-check]                   |                  |        ✅         |                   |
+| [markdown-table-formatter][markdown-table-formatter]         |                  |        ✅         |                   |
+| [markdownlint][markdownlint]                                 |                  |        ✅         |        ✅         |
+| [mypy][mypy]                                                 |                  |        ✅         |                   |
+| [npm-groovy-lint][npm-groovy-lint]                           |                  |        ✅         |        ✅         |
+| [npm-package-json-lint][npm-package-json-lint]               |                  |        ✅         |                   |
+| [perlcritic][perlcritic]                                     |                  |        ✅         |        ✅         |
+| [php-cs-fixer][php-cs-fixer]                                 |                  |        ✅         |                   |
+| [PHP CodeSniffer][phpcs]                                     |                  |        ✅         |        ✅         |
+| [phplint][phplint]                                           |                  |        ✅         |                   |
+| [PHPStan][phpstan]                                           |                  |        ✅         |        ✅         |
+| [PHP built-in linter][phpstd]                                |                  |                   |        ✅         |
+| [pmd][pmd]                                                   |                  |        ✅         |                   |
+| [powershell-formatter][powershell-formatter]                 |                  |        ✅         |                   |
+| [powershell][powershell]                                     |                  |        ✅         |                   |
+| [Prettier][prettier]                                         |                  |        ✅         |        ✅         |
+| [proselint][proselint]                                       |                  |        ✅         |                   |
+| [protolint][protolint]                                       |                  |        ✅         |        ✅         |
+| [PSScriptAnalyzer][ps-script-analyzer]                       |                  |                   |        ✅         |
+| [Psalm][psalm]                                               |                  |        ✅         |        ✅         |
+| [puppet-lint][puppet-lint]                                   |                  |        ✅         |                   |
+| [pyink][pyink]                                               |                  |                   |        ✅         |
+| [pylint][pylint]                                             |                  |        ✅         |        ✅         |
+| [pyright][pyright]                                           |                  |        ✅         |                   |
+| [Raku][raku]                                                 |                  |        ✅         |        ✅         |
+| [remark-lint][remark-lint]                                   |                  |        ✅         |                   |
+| [renovate-config-validator][renovate-config-validator]       |                  |                   |        ✅         |
+| [revive][revive]                                             |                  |        ✅         |                   |
+| [roslynator][roslynator]                                     |                  |        ✅         |                   |
+| [rst-lint][rst-lint]                                         |                  |        ✅         |                   |
+| [rstcheck][rstcheck]                                         |                  |        ✅         |                   |
+| [RuboCop][rubocop]                                           |                  |        ✅         |        ✅         |
+| [ruff][ruff]                                                 |                  |        ✅         |        ✅         |
+| [Rustfmt][rustfmt]                                           |                  |                   |        ✅         |
+| [scalafix][scalafix]                                         |                  |        ✅         |                   |
+| [scalafmt][scalafmt]                                         |                  |                   |        ✅         |
+| [secretlint][secretlint]                                     |                  |        ✅         |                   |
+| [semgrep][semgrep]                                           |                  |        ✅         |                   |
+| [sfdx-scanner-apex][sfdx-scanner-apex]                       |                  |        ✅         |                   |
+| [sfdx-scanner-aura][sfdx-scanner-aura]                       |                  |        ✅         |                   |
+| [sfdx-scanner-lwc][sfdx-scanner-lwc]                         |                  |        ✅         |                   |
+| [ShellCheck][shellcheck]                                     |                  |        ✅         |        ✅         |
+| [shfmt][shfmt]                                               |                  |        ✅         |        ✅         |
+| [snakefmt][snakefmt]                                         |                  |        ✅         |        ✅         |
+| [snakemake][snakemake]                                       |                  |        ✅         |        ✅         |
+| [spectral][spectral]                                         |                  |        ✅         |        ✅         |
+| [sqlfluff][sqlfluff]                                         |                  |        ✅         |        ✅         |
+| [standardjs][standardjs]                                     |                  |        ✅         |        ✅         |
+| [stylelint][stylelint]                                       |                  |        ✅         |        ✅         |
+| [swiftlint][swiftlint]                                       |                  |        ✅         |                   |
+| [syft][syft]                                                 |                  |        ✅         |                   |
+| [tekton-lint][tekton-lint]                                   |                  |        ✅         |        ✅         |
+| [terraform-fmt][terraform-fmt]                               |                  |        ✅         |        ✅         |
+| [terragrunt][terragrunt]                                     |                  |        ✅         |        ✅         |
+| [terrascan][terrascan]                                       |                  |        ✅         |        ✅         |
+| [textlint][textlint]                                         |                  |                   |        ✅         |
+| [tflint][tflint]                                             |                  |        ✅         |        ✅         |
+| [trivy][trivy]                                               |                  |        ✅         |                   |
+| [trufflehog][trufflehog]                                     |                  |        ✅         |                   |
+| [tsqllint][tsqllint]                                         |                  |        ✅         |                   |
+| [v8r][v8r]                                                   |                  |        ✅         |                   |
+| [vale][vale]                                                 |                  |        ✅         |                   |
+| [YamlLint][yamllint]                                         |                  |        ✅         |        ✅         |
 
 [actionlint]: https://github.com/rhysd/actionlint
 [ansible-lint]: https://github.com/ansible/ansible-lint
