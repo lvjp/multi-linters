@@ -92,7 +92,7 @@
 | [Raku][raku]                                                 |                  |        ✅         |        ✅         |
 | [remark-lint][remark-lint]                                   |                  |        ✅         |                   |
 | [renovate-config-validator][renovate-config-validator]       |                  |                   |        ✅         |
-| [revive][revive]                                             |                  |        ✅         |                   |
+| [revive][revive]                                             |                  |        ✅         |      ✅[^1]       |
 | [roslynator][roslynator]                                     |                  |        ✅         |                   |
 | [rst-lint][rst-lint]                                         |                  |        ✅         |                   |
 | [rstcheck][rstcheck]                                         |                  |        ✅         |                   |
@@ -128,6 +128,8 @@
 | [v8r][v8r]                                                   |                  |        ✅         |                   |
 | [vale][vale]                                                 |                  |        ✅         |                   |
 | [YamlLint][yamllint]                                         |                  |        ✅         |        ✅         |
+
+[^1]: Revive is activated through golangci-lint configuration
 
 [actionlint]: https://github.com/rhysd/actionlint
 [ansible-lint]: https://github.com/ansible/ansible-lint
