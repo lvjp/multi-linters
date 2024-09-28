@@ -1,0 +1,18 @@
+---
+id: golangci-lint
+project:
+  name: golangci-lint
+  license: GPL-3.0-only
+  logo: https://github.com/golangci/golangci-lint/blob/master/assets/go.png
+  repository: https://github.com/golangci/golangci-lint
+  website: https://golangci-lint.run/
+capabilities:
+  sarif:
+    args:
+      - --format=sarif
+  mode: random_group_of_files
+dockerfile:
+  build: |-
+    FROM golangci/golangci-lint:v1.60.3-alpine AS golangci-lint
+  install: |-
+    COPY --link --from=golangci-lint /usr/bin/golangci-lint /usr/bin/golangci-lint
