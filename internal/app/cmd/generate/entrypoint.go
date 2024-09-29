@@ -18,7 +18,7 @@ func Entrypoint() error {
 		return err
 	}
 
-	tmpl, err := template.New("docker").Parse(string(templateText))
+	tmpl, err := template.New("docker").Parse(templateText)
 	if err != nil {
 		return fmt.Errorf("cannot parse template: %w", err)
 	}

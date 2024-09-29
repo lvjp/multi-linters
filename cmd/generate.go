@@ -2,6 +2,7 @@ package cmd
 
 import (
 	"github.com/lvjp/multi-linters/internal/app/cmd/generate"
+
 	"github.com/spf13/cobra"
 )
 
