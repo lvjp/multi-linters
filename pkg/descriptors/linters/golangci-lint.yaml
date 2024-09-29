@@ -7,9 +7,6 @@ project:
   repository: https://github.com/golangci/golangci-lint
   website: https://golangci-lint.run/
 capabilities:
-  sarif:
-    args:
-      - --format=sarif
   mode: random_group_of_files
 dockerfile:
   build: |-

@@ -80,10 +80,7 @@ type Linter struct {
 		Website    string
 	}
 	Capabilities struct {
-		Mode  Mode
-		Sarif *struct {
-			Args []string
-		}
+		Mode Mode
 	}
 	Dockerfile struct {
 		Build   string

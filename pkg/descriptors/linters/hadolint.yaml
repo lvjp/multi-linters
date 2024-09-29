@@ -7,9 +7,6 @@ project:
   repository: https://github.com/hadolint/hadolint
   website: https://hadolint.github.io/hadolint
 capabilities:
-  sarif:
-    args:
-      - --format=sarif
   mode: random_group_of_files
 dockerfile:
   build: |-

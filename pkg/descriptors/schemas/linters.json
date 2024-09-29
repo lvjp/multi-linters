@@ -62,19 +62,6 @@
           "description": "Defines how the linter should be called",
           "type": "string",
           "enum": ["file_per_file", "random_group_of_files", "project"]
-        },
-        "sarif": {
-          "title": "Can output SARIF",
-          "description": "Shows if we can use the generated SARIF report",
-          "type": "object",
-          "properties": {
-            "args": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            }
-          }
         }
       },
       "required": ["mode"]
