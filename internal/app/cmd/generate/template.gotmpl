@@ -1,0 +1,25 @@
+# BUILD:BEGIN
+{{- range $_, $linter := .}}
+# BUILD({{ .ID }}):BEGIN
+{{ $linter.Dockerfile.Build }}
+# BUILD({{ .ID }}):END
+{{- end }}
+# BUILD:END
+
+FROM alpine:3.20.3@sha256:beefdbd8a1da6d2915566fde36db9db0b524eb737fc57cd1367effd16dc0d06d
+
+# INSTALL:BEGIN
+{{- range $_, $linter := .}}
+# INSTALL({{ .ID }}):BEGIN
+{{ $linter.Dockerfile.Install }}
+# INSTALL({{ .ID }}):END
+{{- end }}
+# INSTALL:END
+
+ARG TARGETPLATFORM
+
+# from context is defined with command line
+# hadolint ignore=DL3022
+COPY --from=multi-linters-binaries "${TARGETPLATFORM}/multi-linters" /usr/bin/
+
+ENTRYPOINT ["/usr/bin/multi-linters"]

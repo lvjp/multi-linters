@@ -1,5 +1,5 @@
 {
-  "$id": "https://github.com/lvjp/multi-linters/blob/main/descriptors/schemas/linters.json",
+  "$id": "https://github.com/lvjp/multi-linters/blob/main/pkg/descriptors/schemas/linters.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Multi-linter linter descriptor",
   "description": "Linter definition for multi-linter",
