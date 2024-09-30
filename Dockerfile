@@ -1,6 +1,6 @@
 # BUILD:BEGIN
 # BUILD(golangci-lint):BEGIN
-FROM golang:1.23.0-alpine AS golang
+FROM golang:1.23.0-alpine@sha256:d0b31558e6b3e4cc59f6011d79905835108c919143ebecc58f35965bf79948f4 AS golang
 FROM golangci/golangci-lint:v1.61.0-alpine@sha256:61e2d68adc792393fcb600340fe5c28059638d813869d5b4c9502392a2fb4c96 AS golangci-lint
 # BUILD(golangci-lint):END
 # BUILD(hadolint):BEGIN
