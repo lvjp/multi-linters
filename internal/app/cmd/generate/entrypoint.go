@@ -3,29 +3,52 @@ package generate
 import (
 	_ "embed"
 	"fmt"
+	"maps"
 	"os"
+	"slices"
 	"text/template"
 
-	"github.com/lvjp/multi-linters/pkg/descriptors"
+	"github.com/lvjp/multi-linters/pkg/linter"
+	"github.com/lvjp/multi-linters/pkg/linter/registry"
 )
 
 //go:embed template.gotmpl
 var templateText string
 
 func Entrypoint() error {
-	descriptors, err := descriptors.Load()
-	if err != nil {
-		return err
-	}
-
 	tmpl, err := template.New("docker").Parse(templateText)
 	if err != nil {
 		return fmt.Errorf("cannot parse template: %w", err)
 	}
 
-	if err := tmpl.Execute(os.Stdout, descriptors); err != nil {
+	data := map[string]any{
+		"Linters":  registry.Linters(),
+		"Packages": listPackages(),
+	}
+
+	if err := tmpl.Execute(os.Stdout, data); err != nil {
 		return fmt.Errorf("template rendering error: %w", err)
 	}
 
 	return nil
+}
+
+func listPackages() []linter.Package {
+	packages := make(map[string]linter.Package)
+
+	for _, l := range registry.Linters() {
+		for _, pkg := range l.Descriptor().Dockerfile.Packages {
+			if _, exists := packages[pkg.Name]; !exists {
+				packages[pkg.Name] = pkg
+			}
+		}
+	}
+
+	list := make([]linter.Package, len(packages))
+
+	for i, name := range slices.Sorted(maps.Keys(packages)) {
+		list[i] = packages[name]
+	}
+
+	return list
 }
