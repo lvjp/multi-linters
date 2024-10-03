@@ -1,9 +1,9 @@
 # BUILD:BEGIN
-{{- range .Linters }}{{ with .Descriptor }}
+{{- range .Linters }}{{ with .Descriptor }}{{ if gt (len .Dockerfile.Build) 0 }}
 # BUILD({{ .ID }}):BEGIN
 {{ .Dockerfile.Build }}
 # BUILD({{ .ID }}):END
-{{- end }}{{ end }}
+{{- end }}{{ end }}{{ end }}
 # BUILD:END
 
 FROM alpine:3.20.3@sha256:beefdbd8a1da6d2915566fde36db9db0b524eb737fc57cd1367effd16dc0d06d

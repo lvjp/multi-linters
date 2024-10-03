@@ -34,6 +34,7 @@ RUN apk add --no-cache \
     fossil==2.24-r1 \
     git==2.45.2-r0 \
     mercurial==6.7.4-r1 \
+    npm==10.8.0-r0 \
     subversion==1.14.3-r2
 # APK_ADD:END
 
@@ -62,6 +63,9 @@ COPY --link --from=shellcheck /bin/shellcheck /usr/bin/shellcheck
 # INSTALL(shfmt):BEGIN
 COPY --link --from=shfmt /bin/shfmt /usr/bin/
 # INSTALL(shfmt):END
+# INSTALL(v8r):BEGIN
+RUN npm -g install v8r@4.1.0
+# INSTALL(v8r):END
 # INSTALL:END
 
 ARG TARGETPLATFORM
