@@ -41,7 +41,7 @@ type Package struct {
 type License string
 
 const (
-	LicenceGPL3_0 License = "GPL-3.0-only"
+	LicenseGPL3_0 License = "GPL-3.0-only"
 )
 
 type Mode string

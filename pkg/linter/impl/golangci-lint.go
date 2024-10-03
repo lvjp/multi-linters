@@ -17,7 +17,7 @@ func init() {
 				ID: "golangci-lint",
 				Project: linter.Project{
 					Name:       "golangci-lint",
-					License:    linter.LicenceGPL3_0,
+					License:    linter.LicenseGPL3_0,
 					Logo:       "https://github.com/golangci/golangci-lint/blob/master/assets/go.png",
 					Repository: "https://github.com/golangci/golangci-lint",
 					Website:    "https://golangci-lint.run/",

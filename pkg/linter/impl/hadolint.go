@@ -16,7 +16,7 @@ func init() {
 				ID: "hadolint",
 				Project: linter.Project{
 					Name:       "hadolint",
-					License:    linter.LicenceGPL3_0,
+					License:    linter.LicenseGPL3_0,
 					Logo:       "https://hadolint.github.io/hadolint/img/cat_container.png",
 					Repository: "https://github.com/hadolint/hadolint",
 					Website:    "https://hadolint.github.io/hadolint",
