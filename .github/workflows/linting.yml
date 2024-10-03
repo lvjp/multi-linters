@@ -91,12 +91,6 @@ jobs:
           # markdown-table-formatter mess with prettier
           DISABLE_LINTERS: MARKDOWN_MARKDOWN_TABLE_FORMATTER
           REPOSITORY_CHECKOV_CONFIG_FILE: .checkov.yaml
-
-      - name: Archive Megalinter artifacts
-        if: success() || failure()
-        uses: actions/upload-artifact@50769540e7f4bd5e21e526ee35c689e35e0d6874 # v4.4.0
-        with:
-          name: MegaLinter reports
-          path: |
-            megalinter-reports
-            mega-linter.log
+          # Stop linting mega-linter generated files
+          LOG_FILE: ${{ runner.temp }}/mega-linter.log
+          REPORT_OUTPUT_FOLDER: ${{ runner.temp }}/megalinter-reports
