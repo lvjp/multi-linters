@@ -142,7 +142,14 @@
 [checkmake]: https://github.com/mrtazz/checkmake
 [checkov]: https://github.com/bridgecrewio/checkov
 [checkstyle]: https://github.com/checkstyle/checkstyle
-[chktex]: https://git.savannah.nongnu.org/cgit/chktex.git
+
+<!-- markdown-link-check-disable -->
+<!-- Disable chktex link checking since it has been down for several days -->
+
+[chktex]: https://localhost/git.savannah.nongnu.org/cgit/chktex.git
+
+<!-- markdown-link-check-enable -->
+
 [clang-format]: https://github.com/llvm/llvm-project
 [clippy]: https://github.com/rust-lang/rust-clippy
 [clj-kondo]: https://github.com/borkdude/clj-kondo
