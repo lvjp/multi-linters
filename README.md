@@ -2,7 +2,7 @@
 
 ## Comparison
 
-| Linter                                                       | multi-linter (2) | mega-linter (110) | super-linter (75) |
+| Linter                                                       | multi-linter (3) | mega-linter (110) | super-linter (75) |
 | ------------------------------------------------------------ | :--------------: | :---------------: | :---------------: |
 | [actionlint][actionlint]                                     |                  |        ✅         |        ✅         |
 | [ansible-lint][ansible-lint]                                 |                  |        ✅         |        ✅         |
@@ -43,7 +43,7 @@
 | [flake8][flake8]                                             |                  |        ✅         |        ✅         |
 | [gherkin-lint][gherkin-lint]                                 |                  |        ✅         |        ✅         |
 | [Git conflict markers presence in files][git-diff]           |                  |        ✅         |        ✅         |
-| [GitLeaks][gitleaks]                                         |                  |        ✅         |        ✅         |
+| [GitLeaks][gitleaks]                                         |        ✅        |        ✅         |        ✅         |
 | [golangci-lint][golangci-lint]                               |        ✅        |        ✅         |        ✅         |
 | [google-java-format][google-java-format]                     |                  |                   |        ✅         |
 | [GoReleaser][goreleaser]                                     |                  |                   |        ✅         |

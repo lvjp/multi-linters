@@ -42,6 +42,7 @@ type License string
 
 const (
 	LicenseGPL3_0 License = "GPL-3.0-only"
+	LicenseMIT    License = "MIT"
 )
 
 type Mode string

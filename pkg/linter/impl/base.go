@@ -63,6 +63,12 @@ func NewFileMatcherAggregator(criterias ...FileMatcherCriteria) FileMatcherCrite
 	}
 }
 
+func NewAcceptAllFileMatcherCriteria() FileMatcherCriteria {
+	return func(_ string) bool {
+		return true
+	}
+}
+
 func NewExtensionFileMatcher(extensions ...string) FileMatcherCriteria {
 	return func(path string) bool {
 		base := filepath.Base(path)

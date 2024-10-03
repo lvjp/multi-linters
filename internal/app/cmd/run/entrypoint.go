@@ -10,7 +10,6 @@ import (
 	"os/exec"
 	"time"
 
-	"github.com/lvjp/multi-linters/pkg/linter"
 	"github.com/lvjp/multi-linters/pkg/linter/registry"
 
 	"github.com/jedib0t/go-pretty/v6/table"
@@ -38,9 +37,7 @@ func computeActivation() error {
 
 	for _, file := range files {
 		for _, l := range registry.Linters() {
-			if l.Descriptor().Mode != linter.ModeProject {
-				l.FileMatcher().OnFile(file)
-			}
+			l.FileMatcher().OnFile(file)
 		}
 	}
 
