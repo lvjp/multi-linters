@@ -34,7 +34,9 @@ func Entrypoint() error {
 }
 
 func listPackages() []linter.Package {
-	packages := make(map[string]linter.Package)
+	packages := map[string]linter.Package{
+		"git": {Name: "git", Version: "2.45.2-r0"},
+	}
 
 	for _, l := range registry.Linters() {
 		for _, pkg := range l.Descriptor().Dockerfile.Packages {
