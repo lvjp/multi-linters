@@ -12,6 +12,9 @@ FROM hadolint/hadolint:v2.12.0-alpine@sha256:3c206a451cec6d486367e758645269fd7d6
 # BUILD(shellcheck):BEGIN
 FROM koalaman/shellcheck:v0.10.0@sha256:2097951f02e735b613f4a34de20c40f937a6c8f18ecb170612c88c34517221fb AS shellcheck
 # BUILD(shellcheck):END
+# BUILD(shfmt):BEGIN
+FROM mvdan/shfmt:3.9.0@sha256:cb4ca87cc18e52f184a7ba1ae1ef7350b79a2c216ace78a0d24b473e87f0b8f5 AS shfmt
+# BUILD(shfmt):END
 # BUILD:END
 
 FROM alpine:3.20.3@sha256:beefdbd8a1da6d2915566fde36db9db0b524eb737fc57cd1367effd16dc0d06d
@@ -43,6 +46,9 @@ COPY --link --from=hadolint /bin/hadolint /usr/bin/hadolint
 # INSTALL(shellcheck):BEGIN
 COPY --link --from=shellcheck /bin/shellcheck /usr/bin/shellcheck
 # INSTALL(shellcheck):END
+# INSTALL(shfmt):BEGIN
+COPY --link --from=shfmt /bin/shfmt /usr/bin/
+# INSTALL(shfmt):END
 # INSTALL:END
 
 ARG TARGETPLATFORM

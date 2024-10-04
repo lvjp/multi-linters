@@ -41,6 +41,7 @@ type Package struct {
 type License string
 
 const (
+	LicenseBSD    License = "BSD-3-Clause"
 	LicenseGPL3_0 License = "GPL-3.0-only"
 	LicenseMIT    License = "MIT"
 )
