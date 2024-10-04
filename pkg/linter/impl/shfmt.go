@@ -1,7 +1,6 @@
 package impl
 
 import (
-	"fmt"
 	"os"
 	"os/exec"
 
@@ -36,16 +35,16 @@ type shfmt struct {
 	baseLinter
 }
 
-func (l *shfmt) Execute() error {
+func (l *shfmt) Execute() (errCount int) {
 	for _, file := range l.fileMatcher.Files() {
 		cmd := exec.Command("shfmt", file)
 		cmd.Stdout = os.Stdout
 		cmd.Stderr = os.Stderr
 
 		if err := cmd.Run(); err != nil {
-			return fmt.Errorf("shfmt error on file %s", file)
+			errCount++
 		}
 	}
 
-	return nil
+	return
 }

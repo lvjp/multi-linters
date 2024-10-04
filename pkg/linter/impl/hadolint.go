@@ -1,7 +1,6 @@
 package impl
 
 import (
-	"fmt"
 	"os"
 	"os/exec"
 
@@ -39,16 +38,16 @@ type hadolint struct {
 	baseLinter
 }
 
-func (l *hadolint) Execute() error {
+func (l *hadolint) Execute() (errCount int) {
 	for _, file := range l.fileMatcher.Files() {
 		cmd := exec.Command("hadolint", file)
 		cmd.Stdout = os.Stdout
 		cmd.Stderr = os.Stderr
 
 		if err := cmd.Run(); err != nil {
-			return fmt.Errorf("hadolint error on file %s", file)
+			errCount++
 		}
 	}
 
-	return nil
+	return
 }

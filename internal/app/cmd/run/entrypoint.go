@@ -22,9 +22,7 @@ func Entrypoint() error {
 
 	fmt.Println()
 
-	if err := runLinters(); err != nil {
-		return err
-	}
+	runLinters()
 
 	return nil
 }
@@ -60,14 +58,13 @@ func computeActivation() error {
 	return nil
 }
 
-func runLinters() error {
+func runLinters() {
 	t := table.NewWriter()
 	t.SetOutputMirror(os.Stdout)
 	t.SetAutoIndex(true)
 	t.SetTitle("Execution summary")
-	t.AppendHeader(table.Row{"ID", "Mode", "Status", "Elapsed time"})
+	t.AppendHeader(table.Row{"ID", "Mode", "Files", "Errors", "status", "Elapsed time"})
 
-	var lastError error
 	for _, linter := range registry.Linters() {
 		if !linter.Activated() {
 			continue
@@ -76,27 +73,31 @@ func runLinters() error {
 		descriptor := linter.Descriptor()
 		fmt.Println("### Launch", descriptor.ID)
 		begin := time.Now()
-		err := linter.Execute()
+		errCount := linter.Execute()
 		elapsed := time.Since(begin).Truncate(time.Millisecond)
 		fmt.Println("Elapsed time:", elapsed)
 
 		var status string
-		if err != nil {
-			status = "failed"
-			fmt.Println("Execution error:", err)
-			lastError = fmt.Errorf("failed to execute %s linter: %w", descriptor.ID, err)
+		if errCount > 0 {
+			status = "❌"
+			fmt.Println("❌ Execution error")
 		} else {
-			status = "succeeded"
-			fmt.Println("Execution succeeded !")
+			status = "✅"
+			fmt.Println("✅ Execution succeeded !")
 		}
 
-		t.AppendRow(table.Row{descriptor.ID, descriptor.Mode, status, elapsed})
+		t.AppendRow(table.Row{
+			descriptor.ID,
+			descriptor.Mode,
+			len(linter.FileMatcher().Files()),
+			errCount,
+			status,
+			elapsed,
+		})
 		fmt.Println()
 	}
 
 	t.Render()
-
-	return lastError
 }
 
 func listFiles() ([]string, error) {

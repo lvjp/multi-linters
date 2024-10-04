@@ -1,7 +1,6 @@
 package impl
 
 import (
-	"fmt"
 	"os"
 	"os/exec"
 
@@ -38,16 +37,16 @@ type shellcheck struct {
 	baseLinter
 }
 
-func (l *shellcheck) Execute() error {
+func (l *shellcheck) Execute() (errCount int) {
 	for _, file := range l.fileMatcher.Files() {
 		cmd := exec.Command("shellcheck", file)
 		cmd.Stdout = os.Stdout
 		cmd.Stderr = os.Stderr
 
 		if err := cmd.Run(); err != nil {
-			return fmt.Errorf("shellcheck error on file %s", file)
+			errCount++
 		}
 	}
 
-	return nil
+	return
 }

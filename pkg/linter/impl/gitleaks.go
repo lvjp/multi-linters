@@ -1,7 +1,6 @@
 package impl
 
 import (
-	"fmt"
 	"os"
 	"os/exec"
 	"path/filepath"
@@ -37,7 +36,7 @@ type gitLeaks struct {
 	baseLinter
 }
 
-func (l *gitLeaks) Execute() error {
+func (l *gitLeaks) Execute() (errCount int) {
 	for _, file := range l.fileMatcher.Files() {
 		cmd := exec.Command("gitleaks", "detect", "--no-banner", "--no-git", "--redact", file)
 		cmd.Stdout = os.Stdout
@@ -45,9 +44,9 @@ func (l *gitLeaks) Execute() error {
 		cmd.Dir = filepath.Dir(file)
 
 		if err := cmd.Run(); err != nil {
-			return fmt.Errorf("gitleaks error on file %s: %w", file, err)
+			errCount++
 		}
 	}
 
-	return nil
+	return
 }

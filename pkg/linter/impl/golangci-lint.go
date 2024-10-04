@@ -1,7 +1,6 @@
 package impl
 
 import (
-	"fmt"
 	"os"
 	"os/exec"
 	"path/filepath"
@@ -50,7 +49,7 @@ type golangciLint struct {
 	baseLinter
 }
 
-func (l *golangciLint) Execute() error {
+func (l *golangciLint) Execute() (errCount int) {
 	for _, file := range l.fileMatcher.Files() {
 		cmd := exec.Command("golangci-lint", "run")
 		cmd.Stdout = os.Stdout
@@ -58,9 +57,9 @@ func (l *golangciLint) Execute() error {
 		cmd.Dir = filepath.Dir(file)
 
 		if err := cmd.Run(); err != nil {
-			return fmt.Errorf("golangci-lint error on file %s: %w", file, err)
+			errCount++
 		}
 	}
 
-	return nil
+	return
 }

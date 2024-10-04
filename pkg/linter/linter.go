@@ -10,7 +10,7 @@ type Linter interface {
 	Descriptor() Descriptor
 	FileMatcher() FileMatcher
 	Activated() bool
-	Execute() error
+	Execute() (errCount int)
 }
 
 type Descriptor struct {
