@@ -2,7 +2,7 @@
 
 ## Comparison
 
-| Linter                                                       | multi-linter (3) | mega-linter (110) | super-linter (75) |
+| Linter                                                       | multi-linter (4) | mega-linter (110) | super-linter (75) |
 | ------------------------------------------------------------ | :--------------: | :---------------: | :---------------: |
 | [actionlint][actionlint]                                     |                  |        ✅         |        ✅         |
 | [ansible-lint][ansible-lint]                                 |                  |        ✅         |        ✅         |
@@ -106,7 +106,7 @@
 | [sfdx-scanner-apex][sfdx-scanner-apex]                       |                  |        ✅         |                   |
 | [sfdx-scanner-aura][sfdx-scanner-aura]                       |                  |        ✅         |                   |
 | [sfdx-scanner-lwc][sfdx-scanner-lwc]                         |                  |        ✅         |                   |
-| [ShellCheck][shellcheck]                                     |                  |        ✅         |        ✅         |
+| [ShellCheck][shellcheck]                                     |        ✅        |        ✅         |        ✅         |
 | [shfmt][shfmt]                                               |                  |        ✅         |        ✅         |
 | [snakefmt][snakefmt]                                         |                  |        ✅         |        ✅         |
 | [snakemake][snakemake]                                       |                  |        ✅         |        ✅         |

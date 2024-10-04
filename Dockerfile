@@ -9,6 +9,9 @@ FROM golangci/golangci-lint:v1.61.0-alpine@sha256:61e2d68adc792393fcb600340fe5c2
 # BUILD(hadolint):BEGIN
 FROM hadolint/hadolint:v2.12.0-alpine@sha256:3c206a451cec6d486367e758645269fd7d696c5ccb6ff59d8b03b0e45268a199 AS hadolint
 # BUILD(hadolint):END
+# BUILD(shellcheck):BEGIN
+FROM koalaman/shellcheck:v0.10.0@sha256:2097951f02e735b613f4a34de20c40f937a6c8f18ecb170612c88c34517221fb AS shellcheck
+# BUILD(shellcheck):END
 # BUILD:END
 
 FROM alpine:3.20.3@sha256:beefdbd8a1da6d2915566fde36db9db0b524eb737fc57cd1367effd16dc0d06d
@@ -37,6 +40,9 @@ ENV PATH="${PATH}:/usr/lib/go/bin"
 # INSTALL(hadolint):BEGIN
 COPY --link --from=hadolint /bin/hadolint /usr/bin/hadolint
 # INSTALL(hadolint):END
+# INSTALL(shellcheck):BEGIN
+COPY --link --from=shellcheck /bin/shellcheck /usr/bin/shellcheck
+# INSTALL(shellcheck):END
 # INSTALL:END
 
 ARG TARGETPLATFORM
