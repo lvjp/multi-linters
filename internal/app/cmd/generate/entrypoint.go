@@ -40,7 +40,17 @@ func listPackages() []linter.Package {
 
 	for _, l := range registry.Linters() {
 		for _, pkg := range l.Descriptor().Dockerfile.Packages {
-			if _, exists := packages[pkg.Name]; !exists {
+			if _, exists := packages[pkg.Name]; exists {
+				if packages[pkg.Name].Version != pkg.Version {
+					panic(fmt.Sprintf(
+						"Multiple versions [%s] [%s] of %s detected with %s",
+						packages[pkg.Name].Version,
+						pkg.Version,
+						pkg.Name,
+						l.Descriptor().ID,
+					))
+				}
+			} else {
 				packages[pkg.Name] = pkg
 			}
 		}
