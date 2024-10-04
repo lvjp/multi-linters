@@ -19,7 +19,7 @@ func init() {
 					License:    linter.LicenseBSD,
 					Repository: "https://github.com/mvdan/sh",
 				},
-				Mode: linter.ModeRandomGroupOfFile,
+				Mode: linter.ModeElligibleFiles,
 				Dockerfile: linter.Dockerfile{
 					Build:   "FROM mvdan/shfmt:3.9.0@sha256:cb4ca87cc18e52f184a7ba1ae1ef7350b79a2c216ace78a0d24b473e87f0b8f5 AS shfmt",
 					Install: "COPY --link --from=shfmt /bin/shfmt /usr/bin/",

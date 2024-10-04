@@ -49,8 +49,7 @@ const (
 type Mode string
 
 const (
-	ModeFilePerFile       Mode = "file_per_file"
-	ModeSubFolder         Mode = "subfolder"
-	ModeRandomGroupOfFile Mode = "random_group_of_files"
-	ModeProject           Mode = "project"
+	ModeElligibleFiles Mode = "elligible_files"
+	ModeSubFolder      Mode = "subfolder"
+	ModeAllFiles       Mode = "all_files"
 )

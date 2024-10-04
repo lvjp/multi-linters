@@ -21,7 +21,7 @@ func init() {
 					Repository: "https://github.com/koalaman/shellcheck",
 					Website:    "https://www.shellcheck.net/",
 				},
-				Mode: linter.ModeRandomGroupOfFile,
+				Mode: linter.ModeElligibleFiles,
 				Dockerfile: linter.Dockerfile{
 					Build:   "FROM koalaman/shellcheck:v0.10.0@sha256:2097951f02e735b613f4a34de20c40f937a6c8f18ecb170612c88c34517221fb AS shellcheck",
 					Install: "COPY --link --from=shellcheck /bin/shellcheck /usr/bin/shellcheck",

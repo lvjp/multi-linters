@@ -21,7 +21,7 @@ func (l *baseLinter) FileMatcher() linter.FileMatcher {
 }
 
 func (l *baseLinter) Activated() bool {
-	return l.descriptor.Mode == linter.ModeProject || l.fileMatcher.Matched()
+	return l.fileMatcher.Matched()
 }
 
 type FileMatcherCriteria func(path string) bool
