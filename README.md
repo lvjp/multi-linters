@@ -2,9 +2,9 @@
 
 ## Comparison
 
-| Linter                                                       | multi-linter (5) | mega-linter (110) | super-linter (75) |
+| Linter                                                       | multi-linter (6) | mega-linter (110) | super-linter (75) |
 | ------------------------------------------------------------ | :--------------: | :---------------: | :---------------: |
-| [actionlint][actionlint]                                     |                  |        ✅         |        ✅         |
+| [actionlint][actionlint]                                     |        ✅        |        ✅         |        ✅         |
 | [ansible-lint][ansible-lint]                                 |                  |        ✅         |        ✅         |
 | [Azure Resource Manager Template Toolkit (arm-ttk)][arm-ttk] |                  |        ✅         |        ✅         |
 | [ASL Validator][asl-validator]                               |                  |                   |        ✅         |

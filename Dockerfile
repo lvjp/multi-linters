@@ -1,4 +1,7 @@
 # BUILD:BEGIN
+# BUILD(actionlint):BEGIN
+FROM rhysd/actionlint:1.7.3@sha256:7617f05bd698cd2f1c3aedc05bc733ccec92cca0738f3e8722c32c5b42c70ae6 AS actionlint
+# BUILD(actionlint):END
 # BUILD(gitleaks):BEGIN
 FROM zricethezav/gitleaks:v8.19.3@sha256:b1081012aeb9026447deb2ecf4671f7a71cc035b9a1ce23a36c0a853c5dfde95 AS gitleaks
 # BUILD(gitleaks):END
@@ -28,6 +31,9 @@ RUN apk add --no-cache \
 # APK_ADD:END
 
 # INSTALL:BEGIN
+# INSTALL(actionlint):BEGIN
+COPY --link --from=actionlint /usr/local/bin/actionlint /usr/bin/actionlint
+# INSTALL(actionlint):END
 # INSTALL(gitleaks):BEGIN
 COPY --link --from=gitleaks /usr/bin/gitleaks /usr/bin/
 # INSTALL(gitleaks):END

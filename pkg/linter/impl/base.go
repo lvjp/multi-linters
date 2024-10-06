@@ -63,6 +63,18 @@ func NewFileMatcherAggregator(criterias ...FileMatcherCriteria) FileMatcherCrite
 	}
 }
 
+func NewAndFileMatcherCriteria(criterias ...FileMatcherCriteria) FileMatcherCriteria {
+	return func(path string) bool {
+		for _, c := range criterias {
+			if !c(path) {
+				return false
+			}
+		}
+
+		return true
+	}
+}
+
 func NewAcceptAllFileMatcherCriteria() FileMatcherCriteria {
 	return func(_ string) bool {
 		return true
