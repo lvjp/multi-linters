@@ -1,6 +1,6 @@
 # BUILD:BEGIN
 # BUILD(gitleaks):BEGIN
-FROM zricethezav/gitleaks:v8.19.3@sha256:b1081012aeb9026447deb2ecf4671f7a71cc035b9a1ce23a36c0a853c5dfde95 AS gitleaks
+FROM zricethezav/gitleaks:v8.21.0@sha256:5a6d3338fe0e85fb63c079e0880dc10ee0bc6be54b75a2cf089964fbba7e9bd6 AS gitleaks
 # BUILD(gitleaks):END
 # BUILD(golangci-lint):BEGIN
 FROM golang:1.23.2-alpine@sha256:9dd2625a1ff2859b8d8b01d8f7822c0f528942fe56cfe7a1e7c38d3b8d72d679 AS golang
