@@ -24,7 +24,7 @@ func init() {
 				Mode: linter.ModeAllFiles,
 				Dockerfile: linter.Dockerfile{
 					Build: `# renovate: datasource=docker
-FROM zricethezav/gitleaks:v8.19.3@sha256:b1081012aeb9026447deb2ecf4671f7a71cc035b9a1ce23a36c0a853c5dfde95 AS gitleaks`,
+FROM zricethezav/gitleaks:v8.21.1@sha256:9f4bdc62e5f4e4ae915341f3d957b7b5fff099a37ab2f44ffa08fe5b04a95a6d AS gitleaks`,
 					Install: `COPY --link --from=gitleaks /usr/bin/gitleaks /usr/bin/`,
 				},
 			},
