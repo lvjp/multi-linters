@@ -16,7 +16,7 @@ FROM hadolint/hadolint:v2.12.0-alpine@sha256:3c206a451cec6d486367e758645269fd7d6
 FROM koalaman/shellcheck:v0.10.0@sha256:2097951f02e735b613f4a34de20c40f937a6c8f18ecb170612c88c34517221fb AS shellcheck
 # BUILD(shellcheck):END
 # BUILD(shfmt):BEGIN
-FROM mvdan/shfmt:3.9.0@sha256:cb4ca87cc18e52f184a7ba1ae1ef7350b79a2c216ace78a0d24b473e87f0b8f5 AS shfmt
+FROM mvdan/shfmt:v3.9.0@sha256:cb4ca87cc18e52f184a7ba1ae1ef7350b79a2c216ace78a0d24b473e87f0b8f5 AS shfmt
 # BUILD(shfmt):END
 # BUILD:END
 
