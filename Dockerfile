@@ -23,7 +23,7 @@ FROM koalaman/shellcheck:v0.10.0@sha256:2097951f02e735b613f4a34de20c40f937a6c8f1
 # BUILD(shellcheck):END
 # BUILD(shfmt):BEGIN
 # renovate: datasource=docker
-FROM mvdan/shfmt:v3.9.0@sha256:cb4ca87cc18e52f184a7ba1ae1ef7350b79a2c216ace78a0d24b473e87f0b8f5 AS shfmt
+FROM mvdan/shfmt:v3.10.0@sha256:d19cc37644449fe9a488f234d2c0cf0b770eaf6a5a40e30103e8099013ef8f9e AS shfmt
 # BUILD(shfmt):END
 # BUILD:END
 
