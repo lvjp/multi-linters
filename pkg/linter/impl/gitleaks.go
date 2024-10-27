@@ -1,9 +1,9 @@
 package impl
 
 import (
+	"fmt"
 	"os"
 	"os/exec"
-	"path/filepath"
 
 	"github.com/lvjp/multi-linters/pkg/linter"
 	"github.com/lvjp/multi-linters/pkg/linter/registry"
@@ -39,15 +39,27 @@ type gitLeaks struct {
 
 func (l *gitLeaks) Execute() (errCount int) {
 	for _, file := range l.fileMatcher.Files() {
-		cmd := exec.Command("gitleaks", "detect", "--no-banner", "--no-git", "--redact", file)
-		cmd.Stdout = os.Stdout
-		cmd.Stderr = os.Stderr
-		cmd.Dir = filepath.Dir(file)
-
-		if err := cmd.Run(); err != nil {
+		if !l.executeFile(file) {
 			errCount++
 		}
 	}
 
 	return
+}
+
+func (l *gitLeaks) executeFile(file string) bool {
+	fp, err := os.Open(file)
+	if err != nil {
+		return false
+	}
+
+	defer fp.Close()
+
+	fmt.Println(">", file)
+	cmd := exec.Command("gitleaks", "stdin", "--no-banner", "--redact", "--verbose", "--report-format=json")
+	cmd.Stdin = fp
+	cmd.Stdout = os.Stdout
+	cmd.Stderr = os.Stderr
+
+	return cmd.Run() == nil
 }
