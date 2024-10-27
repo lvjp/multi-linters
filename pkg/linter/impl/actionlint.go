@@ -3,7 +3,6 @@ package impl
 import (
 	"os"
 	"os/exec"
-	"path/filepath"
 	"strings"
 
 	"github.com/lvjp/multi-linters/pkg/linter"
@@ -47,7 +46,6 @@ func (l *actionlint) Execute() (errCount int) {
 		cmd := exec.Command("actionlint", file)
 		cmd.Stdout = os.Stdout
 		cmd.Stderr = os.Stderr
-		cmd.Dir = filepath.Dir(file)
 
 		if err := cmd.Run(); err != nil {
 			errCount++
