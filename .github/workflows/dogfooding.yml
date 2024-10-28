@@ -1,0 +1,21 @@
+---
+name: "Eating your own dog food"
+
+on:
+  push:
+
+permissions:
+  contents: read
+
+jobs:
+  multi-linter:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      
+      # - name: List files
+      #   run: ls -lR ./action.yml
+
+      - uses: ./
