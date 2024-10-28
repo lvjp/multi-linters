@@ -1,0 +1,6 @@
+---
+name: multi-linter
+description: "🐐 Multiple linter on multiple architectures"
+runs:
+  using: "docker"
+  image: "docker://docker.io/lvjp/multi-linter:main"
