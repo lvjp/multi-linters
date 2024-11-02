@@ -71,3 +71,4 @@ ARG TARGETPLATFORM
 COPY --from=multi-linters-binaries "${TARGETPLATFORM}/multi-linters" /usr/bin/
 
 ENTRYPOINT ["/usr/bin/multi-linters"]
+CMD ["run"]
