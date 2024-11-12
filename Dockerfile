@@ -27,6 +27,7 @@ FROM mvdan/shfmt:v3.10.0@sha256:d19cc37644449fe9a488f234d2c0cf0b770eaf6a5a40e301
 # BUILD(shfmt):END
 # BUILD:END
 
+# renovate: datasource=docker
 FROM alpine:3.20.3@sha256:beefdbd8a1da6d2915566fde36db9db0b524eb737fc57cd1367effd16dc0d06d
 
 # APK_ADD:BEGIN
