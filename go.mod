@@ -3,7 +3,7 @@ module github.com/lvjp/multi-linters
 go 1.23.3
 
 require (
-	github.com/jedib0t/go-pretty/v6 v6.6.1
+	github.com/jedib0t/go-pretty/v6 v6.6.3
 	github.com/spf13/cobra v1.8.1
 )
 
