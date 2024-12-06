@@ -43,7 +43,6 @@ jobs:
     runs-on: ubuntu-24.04
 
     outputs:
-      iso8601: ${{ steps.timestamp.outputs.iso8601 }}
       epoch: ${{ steps.timestamp.outputs.epoch }}
 
     steps:
@@ -53,7 +52,6 @@ jobs:
       - name: Extract commit timestamp
         id: timestamp
         run: |
-          echo "iso8601=$(git log -n1 --pretty=%cI)" >> "${GITHUB_OUTPUT}"
           echo "epoch=$(git log -n1 --pretty=%ct)" >> "${GITHUB_OUTPUT}"
 
       - name: Generate build summary
@@ -62,7 +60,6 @@ jobs:
           # shellcheck disable=SC2016
           {
             echo '# Extracted metadata'
-            echo 'iso8601: `${{ steps.timestamp.outputs.iso8601 }}`'
             echo 'epoch: `${{ steps.timestamp.outputs.epoch }}`'
           } >> "${GITHUB_STEP_SUMMARY}"
 
@@ -112,7 +109,7 @@ jobs:
         id: meta
         with:
           images: docker.io/lvjp/multi-linter
-          labels: "org.opencontainers.image.created=${{ needs.git-metadata.outputs.iso8601 }}"
+          labels: "org.opencontainers.image.created={{commit_date 'YYYY-MM-DDTHH:mm:ssZ'}}"
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@49b3bc8e6bdd4a60e6116a5414239cba5943d3cf # v3.2.0
