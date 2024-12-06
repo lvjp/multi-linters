@@ -35,9 +35,9 @@ COPY --from=golang /usr/local/go/src/ /usr/lib/go/src/
 COPY --link --from=golangci-lint /usr/bin/golangci-lint /usr/bin/golangci-lint
 ENV PATH="${PATH}:/usr/lib/go/bin"`,
 					Packages: []linter.Package{
-						{Name: "git", Version: "2.45.2-r0"},
-						{Name: "mercurial", Version: "6.7.4-r1"},
-						{Name: "subversion", Version: "1.14.3-r2"},
+						{Name: "git", Version: "2.47.1-r0"},
+						{Name: "mercurial", Version: "6.9-r0"},
+						{Name: "subversion", Version: "1.14.4-r0"},
 						{Name: "fossil", Version: "2.24-r1"},
 					},
 				},

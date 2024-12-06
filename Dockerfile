@@ -28,14 +28,14 @@ FROM mvdan/shfmt:v3.10.0@sha256:d19cc37644449fe9a488f234d2c0cf0b770eaf6a5a40e301
 # BUILD:END
 
 # renovate: datasource=docker
-FROM alpine:3.20.3@sha256:1e42bbe2508154c9126d48c2b8a75420c3544343bf86fd041fb7527e017a4b4a
+FROM alpine:3.21.0@sha256:e323a465c03a31ad04374fc7239144d0fd4e2b92da6e3e0655580476d3a84621
 
 # APK_ADD:BEGIN
 RUN apk add --no-cache \
     fossil==2.24-r1 \
-    git==2.45.2-r0 \
-    mercurial==6.7.4-r1 \
-    subversion==1.14.3-r2
+    git==2.47.1-r0 \
+    mercurial==6.9-r0 \
+    subversion==1.14.4-r0
 # APK_ADD:END
 
 # INSTALL:BEGIN
