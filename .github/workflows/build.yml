@@ -105,7 +105,8 @@ jobs:
         run: chmod +x -R binaries
 
       - name: Docker Metadata action
-        uses: docker/metadata-action@369eb591f429131d6889c46b94e711f089e6ca96 # v5.6.1
+        #uses: docker/metadata-action@369eb591f429131d6889c46b94e711f089e6ca96 # v5.6.1
+        uses: crazy-max/docker-metadata-action@f78c299c14d84630e013305c57ed3ad13830c957
         id: meta
         with:
           images: docker.io/lvjp/multi-linter
