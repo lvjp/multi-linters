@@ -3,7 +3,7 @@ module github.com/lvjp/multi-linters
 go 1.23.3
 
 require (
-	github.com/jedib0t/go-pretty/v6 v6.6.4
+	github.com/jedib0t/go-pretty/v6 v6.6.5
 	github.com/spf13/cobra v1.8.1
 )
 
@@ -13,4 +13,5 @@ require (
 	github.com/rivo/uniseg v0.2.0 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
 	golang.org/x/sys v0.17.0 // indirect
+	golang.org/x/text v0.21.0 // indirect
 )
