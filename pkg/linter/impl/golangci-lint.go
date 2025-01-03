@@ -26,7 +26,7 @@ func init() {
 					Build: `# renovate: datasource=docker
 FROM golang:1.23.4-alpine@sha256:6c5c9590f169f77c8046e45c611d3b28fe477789acd8d3762d23d4744de69812 AS golang
 # renovate: datasource=docker
-FROM golangci/golangci-lint:v1.62.2-alpine@sha256:0f3af3929517ed4afa1f1bcba4eae827296017720e08ecd5c68b9f0640bc310d AS golangci-lint`,
+FROM golangci/golangci-lint:v1.63.4-alpine@sha256:e1768ec667a10f7712d38abc484d18660d8c32caf3a252b8531ea77ff09de575 AS golangci-lint`,
 					Install: `COPY --from=golang /usr/local/go/go.env /usr/lib/go/
 COPY --from=golang /usr/local/go/bin/ /usr/lib/go/bin/
 COPY --from=golang /usr/local/go/lib/ /usr/lib/go/lib/
