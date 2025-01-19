@@ -1,7 +1,7 @@
 # BUILD:BEGIN
 # BUILD(actionlint):BEGIN
 # renovate: datasource=docker
-FROM rhysd/actionlint:1.7.4@sha256:82244e1db1c60d82c7792180a48dd0bcb838370bb589d53ff132503fc9485868 AS actionlint
+FROM rhysd/actionlint:1.7.7@sha256:887a259a5a534f3c4f36cb02dca341673c6089431057242cdc931e9f133147e9 AS actionlint
 # BUILD(actionlint):END
 # BUILD(gitleaks):BEGIN
 # renovate: datasource=docker
